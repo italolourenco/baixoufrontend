@@ -1,0 +1,51 @@
+<div ng-controller="SearchCtrl as ctrl" style="cursor: default">
+        <nav class="navbar navbar-expand-lg fixed-top backgroudNav">
+            <div class="container whiteText">
+                <div class="row" style="width:100%">
+                    <div class="col-md">
+                        <h5 class="my-0 font-weight-normal" style="padding-top: 1%">Baixou - Front End Teste</h5>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Olá, o que você procura ?" ng-model="searchText">
+                    </div>
+                    <div class="col-1" ng-style="{'text-align':'right'}">
+                            <a class="btn btn-outline-primary gitButton" href="https://github.com/italolourenco/baixoufrontend">GitHub</a>
+                    </div>
+                </div>
+            </div>    
+        </nav>
+
+    <div class="container topRange3">
+
+    <div class="row bottomRange3" ng-if="(ctrl.offers.length == 0)">
+            <div class="loadingBox">
+                <h5>Carregando</h5>
+                <br/>
+                <span><i class="fas fa-spinner fa-spin"></i></span>
+            </div>
+    </div>
+            
+    <div class="row resultBox" ng-if="(ctrl.offers.length>0)">
+        <div class="col-sm-3 bottomRange3" ng-repeat="offert in ctrl.offers | filter:searchText">
+            <div class="card"  title={{offert.titulo}}>
+                <div class="imgBox">
+                    <img class="imgProduct" src={{offert.imagem}}>
+                </div>
+                <div class="card-body">
+                    <p class="titleOffert">{{offert.titulo | limitTo:23}}{{offert.titulo.length >= 23 ? ' ...' : ''}}</p>
+                    <div class="marginCardInfo">
+                        <h6 class="card-title pricing-card-title purpleText">R${{offert.preco}}<h6 ng-if="offert.preco.length==5">0</h6></h6>
+                        <p ng-if="offert.nparcela" class="card-text"><small class="text-muted">ou {{offert.nparcela}}x de R${{offert.vparcela}}</small></p>
+                        <p ng-if="!offert.nparcela" class="card-text"><small class="text-muted">à vista</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <footer class="border-top boxFooter purpleText">
+            <h6 class="topRange3">Italo Lourenço</h6>
+    </footer>
+
+    </div>
+</div>

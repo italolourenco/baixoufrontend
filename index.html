@@ -1,0 +1,21 @@
+<html ng-app="app">
+  <head>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/icon.png">
+    <title>Baixou - Front End Teste</title>
+  </head>
+  <body>
+
+    <div ng-include="'view/search.html'"></div>
+
+    <script type="application/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="models/offers-model.js"></script>
+    <script src="controllers/search-controller.js"></script>
+    <script src="services/searchService.js"></script>
+    <script src="services/tokenService.js"></script>
+  </body>
+</html>

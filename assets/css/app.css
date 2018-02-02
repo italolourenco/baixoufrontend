@@ -1,0 +1,64 @@
+.gitButton{
+    color:white; 
+    border-color:white;
+}
+
+.backgroudNav{
+    background-color: #563d7c;
+}
+
+.whiteText{
+    color:white;
+}
+
+.purpleText{
+    color: #563d7c
+}
+
+.loadingBox{
+    text-align: center;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.resultBox{
+    padding-top: 5%;
+    cursor: default
+}
+
+.imgBox{
+    height: 250px;
+    line-height: 250px;
+    text-align: center;
+}
+
+.imgProduct{
+    margin-top: 5%;
+    max-height: 200px;
+    max-width: 200px;
+    height: auto;
+    height: auto;
+}
+
+.titleOffert{
+    box-shadow: 0px 2px 0px #eeeeee;
+    overflow: hidden;
+    text-align: center;
+}
+
+.marginCardInfo{
+    margin-left:3%
+}
+
+.boxFooter{
+    text-align:center;
+    height:10%;
+}
+
+.topRange3{
+    margin-top:3%
+}
+
+.bottomRange3{
+    margin-bottom:3%
+}
