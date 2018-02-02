@@ -1,4 +1,4 @@
-angular.module("app").controller("SearchCtrl", function ($scope, tokenService, searchService, Offers, $window) {
+angular.module("app").controller("SearchCtrl", function ($scope, tokenService, searchService, Offers) {
 
     var self = this;
     self.offers = [];
@@ -7,7 +7,7 @@ angular.module("app").controller("SearchCtrl", function ($scope, tokenService, s
     {
         tokenService.getToken().then(function (token){       
             searchService.getOffers(token).then(function(offers){
-                self.offers = offers
+                self.offers = offers;
             })
         });
     }

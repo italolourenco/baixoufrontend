@@ -34,7 +34,7 @@
                 <div class="card-body">
                     <p class="titleOffert">{{offert.titulo | limitTo:23}}{{offert.titulo.length >= 23 ? ' ...' : ''}}</p>
                     <div class="marginCardInfo">
-                        <h6 class="card-title pricing-card-title purpleText">R${{offert.preco}}<h6 ng-if="offert.preco.length==5">0</h6></h6>
+                        <h6 class="card-title pricing-card-title purpleText">R${{offert.preco}}</h6>
                         <p ng-if="offert.nparcela" class="card-text"><small class="text-muted">ou {{offert.nparcela}}x de R${{offert.vparcela}}</small></p>
                         <p ng-if="!offert.nparcela" class="card-text"><small class="text-muted">à vista</small></p>
                     </div>

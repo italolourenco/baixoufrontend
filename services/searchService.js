@@ -1,4 +1,4 @@
-angular.module("app").service('searchService', function($http, $cacheFactory, Offers) {
+angular.module("app").service('searchService', function($http, Offers) {
 
     var self = this;
 
